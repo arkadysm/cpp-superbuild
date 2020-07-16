@@ -39,4 +39,4 @@ ExternalProject_Add_StepDependencies(solution_projects configure external)
 ExternalProject_Get_Property(external source_dir binary_dir)
 
 enable_testing()
-add_test(NAME test COMMAND ${CMAKE_COMMAND} -C "${binary_dir}" test)
+add_test(NAME test COMMAND make -C "${binary_dir}" test)
